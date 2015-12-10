@@ -78,6 +78,11 @@ public class LaufzeitTest {
 		System.out.println(endT - startT + " ms\n");
 	}
 
+	/**
+	 * Testet java.util.ArrayList auf io geschwindigkeit
+	 * 
+	 * @since Dec 10, 2015
+	 */
 	public static void testArrayList() {
 		System.out.println("Arraylist:");
 
