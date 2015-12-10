@@ -113,5 +113,6 @@ public class LaufzeitTest {
 	public static void main(String[] args) {
 		testHashTable();
 		testStack();
+		testArrayList();
 	}
 }
