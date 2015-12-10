@@ -1,11 +1,10 @@
 package mueller;
 
-import java.util.Enumeration;
-import java.util.Hashtable;
-
+import java.util.*;
 
 /**
  * Testet verschiedene listen auf geschwidigkeit
+ * 
  * @author max
  * @version Dec 10, 2015
  * 
@@ -21,7 +20,7 @@ public class LaufzeitTest {
 		LaeuferFactory factory = new LaeuferFactory(30000);
 		Hashtable<String, Laeufer> testTable = new Hashtable<String, Laeufer>();
 
-//		write speed test
+		// write speed test
 		long startT = System.currentTimeMillis();
 
 		for (int i = 0; i < 10000; i++) {
@@ -34,7 +33,7 @@ public class LaufzeitTest {
 
 		Enumeration<String> keys = testTable.keys();
 
-//		read speed test 
+		// read speed test
 		startT = System.currentTimeMillis();
 
 		while (keys.hasMoreElements()) {
