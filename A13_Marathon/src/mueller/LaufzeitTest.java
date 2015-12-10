@@ -17,6 +17,8 @@ public class LaufzeitTest {
 	 * @since Dec 10, 2015
 	 */
 	public static void testHashTable() {
+		System.out.println("Hash Table:");
+
 		LaeuferFactory factory = new LaeuferFactory(30000);
 		Hashtable<String, Laeufer> testTable = new Hashtable<String, Laeufer>();
 
@@ -41,10 +43,17 @@ public class LaufzeitTest {
 		}
 
 		endT = System.currentTimeMillis();
-		System.out.println(endT - startT + " ms");
+		System.out.println(endT - startT + " ms\n");
 	}
 
+	/**
+	 * Testet java.util.Stack auf io geschwindigkeit
+	 * 
+	 * @since Dec 10, 2015
+	 */
 	public static void testStack() {
+		System.out.println("Stack:");
+
 		LaeuferFactory factory = new LaeuferFactory(30000);
 		Stack<Laeufer> testStack = new Stack<Laeufer>();
 
@@ -66,23 +75,38 @@ public class LaufzeitTest {
 		}
 
 		endT = System.currentTimeMillis();
-		System.out.println(endT - startT + " ms");
+		System.out.println(endT - startT + " ms\n");
 	}
 
-	public static void test2() {
-		LaeuferFactory factory = new LaeuferFactory(30000);
+	public static void testArrayList() {
+		System.out.println("Arraylist:");
 
+		LaeuferFactory factory = new LaeuferFactory(30000);
+		ArrayList<Laeufer> testArrayList = new ArrayList<Laeufer>();
+
+		// write speed test
 		long startT = System.currentTimeMillis();
 
+		for (int i = 0; i < 10000; i++) {
+			testArrayList.add(factory.createClone());
+		}
+
 		long endT = System.currentTimeMillis();
-		System.out.println(endT - startT);
+
+		// read speed test
+		System.out.println(endT - startT + " ms");
 		startT = System.currentTimeMillis();
 
+		for (int j = 0; j < testArrayList.size(); j++) {
+			testArrayList.get(j);
+		}
+
 		endT = System.currentTimeMillis();
-		System.out.println(endT - startT);
+		System.out.println(endT - startT + " ms");
 	}
 
 	public static void main(String[] args) {
 		testHashTable();
+		testStack();
 	}
 }
