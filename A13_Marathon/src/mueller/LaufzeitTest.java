@@ -1,5 +1,6 @@
 package mueller;
 
+import java.util.Enumeration;
 import java.util.Hashtable;
 
 public class LaufzeitTest {
@@ -9,27 +10,29 @@ public class LaufzeitTest {
 	}
 
 	public static void testHashTable() {
-		LaeuferFactory factory = new LaeuferFactory(20000);
+		LaeuferFactory factory = new LaeuferFactory(30000);
 		Hashtable<String, Laeufer> testTable = new Hashtable<String, Laeufer>();
 
 		long startT = System.currentTimeMillis();
-		
+
 		for (int i = 0; i < 10000; i++) {
 			Laeufer tempLaufer = factory.createClone();
 			testTable.put(tempLaufer.toString(), tempLaufer);
 		}
 
 		long endT = System.currentTimeMillis();
-		System.out.println(endT - startT);
-		
+		System.out.println(endT - startT + " ms");
+
+		Enumeration<String> keys = testTable.keys();
+
 		startT = System.currentTimeMillis();
 
-		for (int i = 0; i < 10000; i++) {
-			testTable.
+		while (keys.hasMoreElements()) {
+			testTable.get(keys.nextElement());
 		}
-		
+
 		endT = System.currentTimeMillis();
-		System.out.println(endT - startT);
+		System.out.println(endT - startT + " ms");
 	}
 
 	public static void test1() {
@@ -53,7 +56,7 @@ public class LaufzeitTest {
 		endT = System.currentTimeMillis();
 		System.out.println(endT - startT);
 	}
-	
+
 	public static void main(String[] args) {
 		testHashTable();
 	}
