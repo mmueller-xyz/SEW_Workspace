@@ -44,18 +44,34 @@ public class LaufzeitTest {
 		System.out.println(endT - startT + " ms");
 	}
 
-	public static void test1() {
+	public static void testStack() {
+		LaeuferFactory factory = new LaeuferFactory(30000);
+		Stack<Laeufer> testStack = new Stack<Laeufer>();
+
+		// write speed test
 		long startT = System.currentTimeMillis();
 
+		for (int i = 0; i < 10000; i++) {
+			testStack.push(factory.createClone());
+		}
+
 		long endT = System.currentTimeMillis();
-		System.out.println(endT - startT);
+		System.out.println(endT - startT + " ms");
+
+		// read speed test
 		startT = System.currentTimeMillis();
 
+		while (!testStack.isEmpty()) {
+			testStack.pop();
+		}
+
 		endT = System.currentTimeMillis();
-		System.out.println(endT - startT);
+		System.out.println(endT - startT + " ms");
 	}
 
 	public static void test2() {
+		LaeuferFactory factory = new LaeuferFactory(30000);
+
 		long startT = System.currentTimeMillis();
 
 		long endT = System.currentTimeMillis();
