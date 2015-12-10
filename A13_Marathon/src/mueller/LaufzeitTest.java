@@ -34,7 +34,7 @@ public class LaufzeitTest {
 
 		Enumeration<String> keys = testTable.keys();
 
-//		read speed test
+//		read speed test 
 		startT = System.currentTimeMillis();
 
 		while (keys.hasMoreElements()) {
