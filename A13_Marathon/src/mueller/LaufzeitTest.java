@@ -107,7 +107,7 @@ public class LaufzeitTest {
 		}
 
 		endT = System.currentTimeMillis();
-		System.out.println(endT - startT + " ms");
+		System.out.println(endT - startT + " ms\n");
 	}
 
 	public static void main(String[] args) {
