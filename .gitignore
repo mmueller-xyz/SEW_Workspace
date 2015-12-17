@@ -2,8 +2,10 @@
 .metadata/
 .metadata
 .gradle
+
 bin/
 tmp/
+
 *.tmp
 *.bak
 *.swp
@@ -12,8 +14,13 @@ local.properties
 .settings/
 .loadpath
 .recommenders/
+
+#compressed arcives
 *.zip
 *.rar
+
+#texteditor tempfiles
+*~
 
 # Eclipse Core
 .project
