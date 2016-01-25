@@ -161,8 +161,9 @@ public class LottoRunde {
 	 * @since Dec 8, 2015
 	 */
 	public static void main(String[] args) {
-		int[] durchschnitt = new int[5];
-		for (int i = 0; i < 10; i++) {
+		double[] durchschnitt = new double[5];
+		int e = 100;
+		for (int i = 0; i < e; i++) {
 			durchschnitt[0] += dreierTippen();
 			durchschnitt[1] += viererTippen();
 			durchschnitt[2] += fünferTippen();
@@ -170,7 +171,7 @@ public class LottoRunde {
 			durchschnitt[4] += sechserTippen();
 		}
 		for (int i = 0; i < durchschnitt.length; i++) {
-			durchschnitt[i] = durchschnitt[i]/10;
+			durchschnitt[i] = durchschnitt[i]/e;
 		}
 		for (int i = 0; i < durchschnitt.length; i++) {
 			System.out.println(durchschnitt[i]);
