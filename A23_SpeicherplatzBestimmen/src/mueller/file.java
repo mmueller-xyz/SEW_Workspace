@@ -15,10 +15,11 @@ import javax.swing.JOptionPane;
 public class file{
 	
 	/**
-	 * Diese Methode 
+	 * Diese Methode gibt wenn das angegebene File Objekt kein Ordner ist die größe zurück
+	 * und wenn es ein Ordner ist ruft die Methode sich für jedes File in dem Ordner sich selbst auf.
 	 * 
 	 * @param dir Der pfad der zu überprüfenden Datei
-	 * @return
+	 * @return Größe des Files / Ordners
 	 * @since Mar 14, 2016
 	 */
 	public static long listDir(File f){
@@ -33,19 +34,26 @@ public class file{
 		return n;
 	}
 	
+	/**
+	 * Die main() Methode ruft grundsätzlich nur listDir() auf und gibt den Returnwert auf der Konsole aus, 
+	 * wurde aber spaßhalber ausgebaut.
+	 * 
+	 * @param args
+	 * @since Mar 15, 2016
+	 */
 	public static void main(String[] args) {
 		JFileChooser fc = new JFileChooser();
 		fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-		fc.showOpenDialog(fc);
+		fc.showOpenDialog(fc);	//Öffnen des FileDialogs
 		long startTime = System.currentTimeMillis();
+		/*Start der Zeitnehmung*/
 		long size = listDir(fc.getSelectedFile());
+		/*Ende der Zeitnehmung*/
 		long finishTime = System.currentTimeMillis();
-		String[] names = {" Byte(s)", " kB", " mB", " GB", " TB"};
+		String[] names = {" Byte(s)", " kB", " mB", " GB", " TB"};	//Liste der Einheten (Erweiterbar)
 		double n = size;
-		int i;
-		for (i = 0;n > 1024;i++) {
-			n /= 1024;
-		}
+		int i;	//wie oft 1024 in n ganzzahlig ausgeht
+		for (i = 0;n > 1024;n /= 1024, i++);
 		for (;i>=0;i--) {
 			System.out.println((size/(long)Math.pow(1024, i))+names[i]);
 		}
