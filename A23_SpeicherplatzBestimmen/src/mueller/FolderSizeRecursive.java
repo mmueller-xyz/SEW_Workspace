@@ -1,9 +1,7 @@
 package mueller;
 
 import java.io.File;
-
 import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 
 /**
  * A23 Bestimmen von Ordnergröße mithilfe von rekursiever programmierung
@@ -12,7 +10,7 @@ import javax.swing.JOptionPane;
  * @version Mar 14, 2016
  * 
  */
-public class file{
+public class FolderSizeRecursive{
 	
 	/**
 	 * Diese Methode gibt wenn das angegebene File Objekt kein Ordner ist die größe zurück
@@ -45,19 +43,26 @@ public class file{
 		JFileChooser fc = new JFileChooser();
 		fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 		fc.showOpenDialog(fc);	//Öffnen des FileDialogs
+		
 		long startTime = System.currentTimeMillis();
 		/*Start der Zeitnehmung*/
 		long size = listDir(fc.getSelectedFile());
 		/*Ende der Zeitnehmung*/
 		long finishTime = System.currentTimeMillis();
+		
 		String[] names = {" Byte(s)", " kB", " mB", " GB", " TB"};	//Liste der Einheten (Erweiterbar)
 		double n = size;
 		int i;	//wie oft 1024 in n ganzzahlig ausgeht
 		for (i = 0;n > 1024;n /= 1024, i++);
-		for (;i>=0;i--) {
-			System.out.println((size/(long)Math.pow(1024, i))+names[i]);
+		for (int j=i;j>=0;j--) {
+			System.out.println((size/(long)Math.pow(1024, j))+names[j]);
 		}
-		System.out.println(finishTime-startTime+" ms");
+		
+		int psi = (int) (size/(finishTime-startTime+0.1)/Math.pow(1024, 3)*100*1000);
+		double ps = ((double) psi) / 100;
+		
+		String persec = "(" + ps + names[3] + "/s)";
+		
+		System.out.println("It took: " + (finishTime-startTime) + " ms "+ persec +" for:\n"+fc.getSelectedFile());
 	}
-
 }

@@ -1,7 +1,5 @@
 package mueller;
 
-import java.sql.Time;
-
 public class test {
 	
 	public static void halloRekursiv(int n){
@@ -62,9 +60,9 @@ public class test {
 		System.out.println(doubleFaktorial(20));
 		System.out.println(longFaktorial(20));
 		long startTime = System.currentTimeMillis();
-		System.out.println(fibonacci(60));
+		System.out.println(fibonacci(50));
 		long finishTime = System.currentTimeMillis();
-		System.out.println("That took: "+(finishTime-startTime)+ " ms");
+		System.out.println("Fibonacci brauchte: "+(finishTime-startTime)+ " ms");
 
 	}
 
