@@ -1,0 +1,113 @@
+commit e076e7fe6ad5561c501bbd67bb2078aea0a46945
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 17 10:22:33 2015 +0100
+
+    added ’*~’ to .gitignore to exclude testeditor temp files
+
+commit 7d9c7f0d345f265cccdc25119b29d1aa35832290
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Mon Dec 14 22:13:45 2015 +0100
+
+    Removed F01(can't be bothered)
+
+commit 348be58381fd82fae271d943c701c517c228fb2f
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Mon Dec 14 22:12:00 2015 +0100
+
+    Removed F01(can't be bothered)
+
+commit 9267856665b2f3c2f4f77df7dc7e43f0763a1d06
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Mon Dec 14 09:49:44 2015 +0100
+
+    initial commit
+
+commit 516188ec6c5445d1c48e7b6f71a84b1f783482f5
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Mon Dec 14 09:49:04 2015 +0100
+
+    minimal changes
+
+commit 64b49acd4c658572751fa2088b9545a183cfbc15
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Fri Dec 11 09:26:59 2015 +0100
+
+    removed all '*.rar's and '*.zip's
+
+commit f54425768b2d689c18bad732cccc1ef789550441
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Fri Dec 11 09:24:51 2015 +0100
+
+    added '*.rar' to .gitignore
+
+commit 6f5e6ff06fc6a33c6d1b757fc26a3369ce92ae33
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Fri Dec 11 08:34:17 2015 +0100
+
+    minor changes
+
+commit 74355132291657f14dd8ac7ddb8e71578ed20dc2
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Fri Dec 11 08:30:01 2015 +0100
+
+    added \'*.zip\' to .gitignore
+
+commit 87489e8130b5549630f73c59f5f61287710bca4b
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 16:24:05 2015 +0100
+
+    A13 minor changes
+
+commit 849a9f18b210c68acb3297d4beb26f2fa72006bf
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 16:19:34 2015 +0100
+
+    A13 added comments
+
+commit dd4ade29e8e50b8f594fec4c0ff2bf1841086f0e
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 15:04:40 2015 +0100
+
+    A13 minor changes
+
+commit 5ebd7d0c69e2c93c6ec253c7e725678a666ff7ef
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 14:53:35 2015 +0100
+
+    A13 added Stack test
+
+commit c46f7cbfefd26edaaee11c4c5ceaff5b05113779
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 14:39:04 2015 +0100
+
+    A13 minor changes
+
+commit 18e2cb8c6dc19ad0afa7da1a77d160c4bc5e8236
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 14:37:16 2015 +0100
+
+    A13 farmated and added comments
+
+commit ae2ba3c743c69fb624abb407bb248b6e17232213
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 14:36:34 2015 +0100
+
+    A13 added hashtable reading test
+
+commit 1c5d0705e928639d1ce3d8cd82797565973339b5
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 14:31:36 2015 +0100
+
+    A13 added hashtable reading test
+
+commit d3fe9042fa079d91a8eec548416c4d9524e10257
+Author: maximilian <mmueller@student.tgm.ac.at>
+Date:   Thu Dec 10 12:56:05 2015 +0100
+
+    initial commit
+
+commit 566ed841d2d254c98504599e214d5e0441afd62f
+Author: mmuellerTGM <maximilian-mueller@gmx.at>
+Date:   Thu Dec 10 12:40:33 2015 +0100
+
+    Initial commit

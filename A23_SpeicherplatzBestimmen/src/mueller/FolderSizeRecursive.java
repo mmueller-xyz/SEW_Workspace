@@ -50,9 +50,9 @@ public class FolderSizeRecursive{
 		/*Ende der Zeitnehmung*/
 		long finishTime = System.currentTimeMillis();
 		
-		String[] names = {" Byte(s)", " kB", " mB", " GB", " TB", " PB"};	//Liste der Einheten (Erweiterbar)
+		String[] names = {" Byte", " kB", " mB", " GB", " TB", " PB"};	//Liste der Einheten (Erweiterbar)
 		double n = size;
-		int i;	//wie oft 1024 in n ganzzahlig ausgeht
+		int i;	//wie oft sich 1024 in n ganzzahlig ausgeht
 		for (i = 0;n > 1024;n /= 1024, i++);
 		for (int j=i;j>=0;j--) {
 			System.out.println((size/(long)Math.pow(1024, j))+names[j]);
@@ -61,17 +61,16 @@ public class FolderSizeRecursive{
 		/*Hier wird die Anzahl an Nachkommastellen auf m beschränkt.*/
 		final int m = 3; //Anzahl der Nachkommastellen (3 recommended)
 		final int o = 3; //Auswahl der Einheit (3 recommended)
-		int psi = (int) (0.0/*um mit double zu rechnen*/ + 
-				size / (finishTime-startTime + 
-				Math.pow(10, -10)/*um div durch 0 zu verhindern*/) / 
+		int psi = (int) (0.0/*um mit double zu rechnen*/ + size / 
+				(finishTime-startTime + Math.pow(10, -5)/*um div durch 0 zu verhindern*/) / 
 				Math.pow(1024, o)/*Auswahl der Einheit*/ * 
 				Math.pow(10, m)/*Anzahl der Nachkommastellen*/ * 
 				1000/*für umrechnung von ms in s*/);
-		double ps = ((double) psi) / Math.pow(10, m);
+		double ps = (0.0 + psi) / Math.pow(10, m);
 		/**/
 		
 		String persec = "(" + ps + names[o] + "/s)";
 		
-		System.out.println("It took: " + (finishTime-startTime) + " ms "+ persec +" for:\n"+fc.getSelectedFile());
+		System.out.println("It took: " + (finishTime-startTime) + " ms " + persec + " for:\n" + fc.getSelectedFile());
 	}
 }
